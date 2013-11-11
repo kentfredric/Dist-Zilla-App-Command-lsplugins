@@ -1,0 +1,72 @@
+NAME
+    Dist::Zilla::App::Command::lsplugins - Show all dzil plugins on your
+    system, with descriptions
+
+VERSION
+    version 0.001000
+
+SYNOPSIS
+        dzil lsplugins # see a list of all plugins on your system
+        dzil lsplugins --version # with versions! 
+        dzil lsplugins --sort    # sort them!
+        dzil lsplugins --abstract # show their ABSTRACTs!
+        dzil lsplugins --with=-FilePruner # show only file pruners
+        dzil lsplugins --roles=dzil  # show all the dzil related role data!
+
+METHODS
+  "opt_spec"
+    Supported parameters:
+
+    *   "--sort"
+
+        Sorting.
+
+    *   "--no-sort"
+
+        No Sorting ( Default )
+
+    *   "--versions"
+
+        Versions
+
+    *   "--no-versions"
+
+        No Versions ( Default )
+
+    *   "--abstract"
+
+        Show abstracts
+
+    *   "--no-abstract"
+
+        Don't show abstracts ( Default )
+
+    *   "--roles=all"
+
+        Show all roles, unabbreviated.
+
+    *   "--roles=dzil-full"
+
+        Show only "dzil" roles, unabbreviated.
+
+    *   "--roles=dzil"
+
+        Show only <"dzil" roles, abbreviated.
+
+    *   "--with=$ROLENAME"
+
+        Show only plugins that "does($rolename)"
+
+        ( A - prefix will be expanded to "Dist::Zilla::Role::" for
+        convenience )
+
+AUTHOR
+    Kent Fredric <kentfredric@gmail.com>
+
+COPYRIGHT AND LICENSE
+    This software is copyright (c) 2013 by Kent Fredric
+    <kentfredric@gmail.com>.
+
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
+
