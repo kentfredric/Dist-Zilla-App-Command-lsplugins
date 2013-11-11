@@ -67,7 +67,8 @@ sub _build__loaded_module {
   }
   catch {
     require Carp;
-    Carp::carp( "Uhoh, " . $module . " failed to load" );
+    Carp::carp( q[Uhoh, ] . $module . q[ failed to load] );
+    ## no critic (ErrorHandling::RequireCarping)
     warn $_;
     $failed = 1;
   };
