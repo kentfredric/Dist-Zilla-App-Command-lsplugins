@@ -95,8 +95,7 @@ sub loaded_module_does {
   $role =~ s/\A-/Dist::Zilla::Role::/msx;
   return unless $self->_loaded_module;
   return unless $self->_loaded_module->can('does');
-  return unless $self->_loaded_module->does($role);
-  1;
+  return $self->_loaded_module->does($role);
 }
 
 no Moose;
@@ -119,7 +118,7 @@ version 0.001000
 
 =head1 METHODS
 
-=head2 <loaded_module_does>
+=head2 C<loaded_module_does>
 
 Loads the module, using C<_loaded_module>, and returns C<undef>
 as soon as it can't proceed further.

@@ -220,8 +220,8 @@ x_Dist_Zilla:
       config:
         Dist::Zilla::Plugin::Test::Compile::PerFile:
           file:
-            - lib/Dist/Zilla/lsplugins/Module.pm
             - lib/Dist/Zilla/App/Command/lsplugins.pm
+            - lib/Dist/Zilla/lsplugins/Module.pm
           path_translator: base64_filter
           prefix: t/00-compile
           skip: []
