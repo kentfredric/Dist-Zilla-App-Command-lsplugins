@@ -89,6 +89,7 @@ sub _build_roles {
   return \@out;
 }
 
+
 sub loaded_module_does {
   my ( $self, $role ) = @_;
   $role =~ s/\A-/Dist::Zilla::Role::/msx;
@@ -115,6 +116,15 @@ Dist::Zilla::lsplugins::Module
 =head1 VERSION
 
 version 0.001000
+
+=head1 METHODS
+
+=head2 <loaded_module_does>
+
+Loads the module, using C<_loaded_module>, and returns C<undef>
+as soon as it can't proceed further.
+
+If it can proceed to calling C<does>, it will return true if the C<plugin> C<does> the specified role.
 
 =head1 AUTHOR
 
