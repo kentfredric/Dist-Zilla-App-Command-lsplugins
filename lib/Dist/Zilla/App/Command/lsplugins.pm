@@ -112,6 +112,17 @@ sub opt_spec {
   );
 }
 
+sub _filter_dzil {
+  my ($value) = @_;
+  return ( $value =~ /(\A|[|])Dist::Zilla::Role::/msx );
+}
+
+sub _shorten_dzil {
+  my ($value) = @_;
+  $value =~ s/(\A|[|])Dist::Zilla::Role::/$1-/msxg;
+  return $value;
+}
+
 sub _process_plugin {
   my ( $self, $plugin, $opt, $args ) = @_;
   if ( defined $opt->with ) {
@@ -129,14 +140,14 @@ sub _process_plugin {
       printf q{ [%s]}, join q[, ], @{ $plugin->roles };
     }
     elsif ( $opt->roles eq 'dzil-full' ) {
-      printf q{ [%s]}, join q[, ], grep { $_ =~ /(\A|[|])Dist::Zilla::Role::/msx } @{ $plugin->roles };
+      printf q{ [%s]}, join q[, ], grep { _filter_dzil($_) } @{ $plugin->roles };
     }
     elsif ( $opt->roles eq 'dzil' ) {
-      printf q{ [%s]}, join q[, ],
-        map { $_ =~ s/(\A|[|])Dist::Zilla::Role::/$1-/msxg; $_ } grep { $_ =~ /(\A|[|])Dist::Zilla::Role::/msx } @{ $plugin->roles };
+      printf q{ [%s]}, join q[, ], map { _shorten_dzil($_) } grep { _filter_dzil($_) } @{ $plugin->roles };
     }
   }
   print "\n";
+  return;
 }
 
 
