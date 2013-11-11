@@ -7,7 +7,7 @@ VERSION
 
 SYNOPSIS
         dzil lsplugins # see a list of all plugins on your system
-        dzil lsplugins --version # with versions! 
+        dzil lsplugins --version # with versions!
         dzil lsplugins --sort    # sort them!
         dzil lsplugins --abstract # show their ABSTRACTs!
         dzil lsplugins --with=-FilePruner # show only file pruners

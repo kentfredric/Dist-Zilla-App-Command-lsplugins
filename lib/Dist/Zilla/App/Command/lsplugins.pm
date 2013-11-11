@@ -185,7 +185,7 @@ version 0.001000
 =head1 SYNOPSIS
 
     dzil lsplugins # see a list of all plugins on your system
-    dzil lsplugins --version # with versions! 
+    dzil lsplugins --version # with versions!
     dzil lsplugins --sort    # sort them!
     dzil lsplugins --abstract # show their ABSTRACTs!
     dzil lsplugins --with=-FilePruner # show only file pruners
@@ -243,7 +243,7 @@ Show only plugins that C<< does($rolename) >>
 
 =back
 
-=for Pod::Coverage execute 
+=for Pod::Coverage execute
 
 =head1 AUTHOR
 
