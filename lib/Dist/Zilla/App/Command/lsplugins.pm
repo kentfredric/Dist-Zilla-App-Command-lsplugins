@@ -146,7 +146,7 @@ sub _process_plugin {
       printf q{ [%s]}, join q[, ], map { _shorten_dzil($_) } grep { _filter_dzil($_) } @{ $plugin->roles };
     }
   }
-  print "\n";
+  printf "\n";
   return;
 }
 
@@ -160,18 +160,18 @@ sub execute {
     while ( my $plugin = $plugin_iterator->() ) {
       $self->_process_plugin( $plugin, $opt, $args );
     }
+    return 0;
   }
-  else {
 
-    my $plugin_iterator = $self->_plugin_iterator;
-    my @plugins;
-    while ( my $plugin = $plugin_iterator->() ) {
-      push @plugins, $plugin;
-    }
-    for my $plugin ( sort { $a->plugin_name cmp $b->plugin_name } @plugins ) {
-      $self->_process_plugin( $plugin, $opt, $args );
-    }
+  my $plugin_iterator = $self->_plugin_iterator;
+  my @plugins;
+  while ( my $plugin = $plugin_iterator->() ) {
+    push @plugins, $plugin;
   }
+  for my $plugin ( sort { $a->plugin_name cmp $b->plugin_name } @plugins ) {
+    $self->_process_plugin( $plugin, $opt, $args );
+  }
+  return 0;
 
 }
 __PACKAGE__->meta->make_immutable;
