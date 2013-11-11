@@ -43,11 +43,11 @@ METHODS
 
     *   "--roles=all"
 
-        Show all roles, unabbreviated.
+        Show all roles, un-abbreviated.
 
     *   "--roles=dzil-full"
 
-        Show only "dzil" roles, unabbreviated.
+        Show only "dzil" roles, un-abbreviated.
 
     *   "--roles=dzil"
 

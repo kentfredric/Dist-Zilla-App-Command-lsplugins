@@ -52,6 +52,7 @@ sub _build__version {
 sub _build_abstract {
   my ($self) = @_;
   require Dist::Zilla::Util;
+  ## no critic ( Subroutines::ProtectPrivateSubs )
   my $e = Dist::Zilla::Util::PEA->_new();
   $e->read_string( $self->file->slurp_utf8 );
   return $e->{abstract};
