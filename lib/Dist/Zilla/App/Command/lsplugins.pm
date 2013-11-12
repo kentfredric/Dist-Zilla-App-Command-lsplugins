@@ -244,7 +244,7 @@ Show only C<dzil> roles, un-abbreviated.
 
 =item * C<--roles=dzil>
 
-Show only <C<dzil> roles, abbreviated.
+Show only C<dzil> roles, abbreviated.
 
 =item * C<--with=$ROLENAME>
 

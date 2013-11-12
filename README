@@ -51,7 +51,7 @@ METHODS
 
     *   "--roles=dzil"
 
-        Show only <"dzil" roles, abbreviated.
+        Show only "dzil" roles, abbreviated.
 
     *   "--with=$ROLENAME"
 
