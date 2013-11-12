@@ -6,7 +6,7 @@ BEGIN {
   $Dist::Zilla::lsplugins::Module::AUTHORITY = 'cpan:KENTNL';
 }
 {
-  $Dist::Zilla::lsplugins::Module::VERSION = '0.001000';
+  $Dist::Zilla::lsplugins::Module::VERSION = '0.001001';
 }
 
 # ABSTRACT: Transient data about a traversed plugin/role/module
@@ -118,7 +118,7 @@ Dist::Zilla::lsplugins::Module - Transient data about a traversed plugin/role/mo
 
 =head1 VERSION
 
-version 0.001000
+version 0.001001
 
 =head1 METHODS
 

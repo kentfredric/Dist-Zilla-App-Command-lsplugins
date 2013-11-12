@@ -51,7 +51,7 @@ sub pmver {
 eval { $v .= pmver('Carp','any version') };
 eval { $v .= pmver('Dist::Zilla::App','any version') };
 eval { $v .= pmver('Dist::Zilla::Util','any version') };
-eval { $v .= pmver('Module::Build','0.4008') };
+eval { $v .= pmver('Module::Build','0.4200') };
 eval { $v .= pmver('Module::Metadata','any version') };
 eval { $v .= pmver('Module::Runtime','any version') };
 eval { $v .= pmver('Moose','any version') };

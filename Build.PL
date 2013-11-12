@@ -7,17 +7,17 @@ use Module::Build 0.3601;
 
 my %module_build_args = (
   "build_requires" => {
-    "Module::Build" => "0.4008"
+    "Module::Build" => "0.4200"
   },
   "configure_requires" => {
-    "Module::Build" => "0.4008"
+    "Module::Build" => "0.4200"
   },
   "dist_abstract" => "Show all C<dzil> plugins on your system, with descriptions",
   "dist_author" => [
     "Kent Fredric <kentfredric\@gmail.com>"
   ],
   "dist_name" => "Dist-Zilla-App-Command-lsplugins",
-  "dist_version" => "0.001000",
+  "dist_version" => "0.001001",
   "license" => "perl",
   "module_name" => "Dist::Zilla::App::Command::lsplugins",
   "recommends" => {},
@@ -45,7 +45,7 @@ my %module_build_args = (
 
 
 my %fallback_build_requires = (
-  "Module::Build" => "0.4008",
+  "Module::Build" => "0.4200",
   "Test::More" => "1.001002"
 );
 

@@ -6,7 +6,7 @@ BEGIN {
   $Dist::Zilla::App::Command::lsplugins::AUTHORITY = 'cpan:KENTNL';
 }
 {
-  $Dist::Zilla::App::Command::lsplugins::VERSION = '0.001000';
+  $Dist::Zilla::App::Command::lsplugins::VERSION = '0.001001';
 }
 
 # ABSTRACT: Show all C<dzil> plugins on your system, with descriptions
@@ -191,7 +191,7 @@ Dist::Zilla::App::Command::lsplugins - Show all C<dzil> plugins on your system, 
 
 =head1 VERSION
 
-version 0.001000
+version 0.001001
 
 =head1 SYNOPSIS
 
