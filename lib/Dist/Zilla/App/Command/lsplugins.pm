@@ -3,7 +3,7 @@ use warnings;
 
 package Dist::Zilla::App::Command::lsplugins;
 
-# ABSTRACT: Show all dzil plugins on your system, with descriptions
+# ABSTRACT: Show all C<dzil> plugins on your system, with descriptions
 
 use Moose;
 use MooseX::NonMoose;
@@ -12,7 +12,7 @@ use Dist::Zilla::App -command;
 =head1 SYNOPSIS
 
     dzil lsplugins # see a list of all plugins on your system
-    dzil lsplugins --version # with versions! 
+    dzil lsplugins --version # with versions!
     dzil lsplugins --sort    # sort them!
     dzil lsplugins --abstract # show their ABSTRACTs!
     dzil lsplugins --with=-FilePruner # show only file pruners
@@ -137,15 +137,15 @@ Don't show abstracts ( B<Default> )
 
 =item * C<--roles=all>
 
-Show all roles, unabbreviated.
+Show all roles, un-abbreviated.
 
 =item * C<--roles=dzil-full>
 
-Show only C<dzil> roles, unabbreviated.
+Show only C<dzil> roles, un-abbreviated.
 
 =item * C<--roles=dzil>
 
-Show only <C<dzil> roles, abbreviated.
+Show only C<dzil> roles, abbreviated.
 
 =item * C<--with=$ROLENAME>
 
@@ -159,12 +159,23 @@ Show only plugins that C<< does($rolename) >>
 
 sub opt_spec {
   return (
-    [ "sort!",     "Sort by module name" ],
-    [ "versions!", "Show versions" ],
-    [ "abstract!", "Show Abstracts" ],
-    [ "roles=s",   "Show applied roles" ],
-    [ "with=s",    "Filter plugins to ones that 'do' the specified role" ]
+    [ q[sort!],     q[Sort by module name] ],
+    [ q[versions!], q[Show versions] ],
+    [ q[abstract!], q[Show Abstracts] ],
+    [ q[roles=s],   q[Show applied roles] ],
+    [ q[with=s],    q[Filter plugins to ones that 'do' the specified role] ]
   );
+}
+
+sub _filter_dzil {
+  my ($value) = @_;
+  return ( $value =~ /(\A|[|])Dist::Zilla::Role::/msx );
+}
+
+sub _shorten_dzil {
+  my ($value) = @_;
+  $value =~ s/(\A|[|])Dist::Zilla::Role::/$1-/msxg;
+  return $value;
 }
 
 sub _process_plugin {
@@ -172,31 +183,31 @@ sub _process_plugin {
   if ( defined $opt->with ) {
     return unless $plugin->loaded_module_does( $opt->with );
   }
-  printf "%s", $plugin->plugin_name;
+  printf q[%s], $plugin->plugin_name;
   if ( $opt->versions ) {
-    printf " (%s)", $plugin->version;
+    printf q[ (%s)], $plugin->version;
   }
   if ( $opt->abstract ) {
-    printf " - %s", $plugin->abstract;
+    printf q[ - %s], $plugin->abstract;
   }
   if ( defined $opt->roles ) {
     if ( $opt->roles eq 'all' ) {
-      printf " [%s]", join q[, ], @{ $plugin->roles };
+      printf q{ [%s]}, join q[, ], @{ $plugin->roles };
     }
     elsif ( $opt->roles eq 'dzil-full' ) {
-      printf " [%s]", join q[, ], grep { $_ =~ /(\A|[|])Dist::Zilla::Role::/msx } @{ $plugin->roles };
+      printf q{ [%s]}, join q[, ], grep { _filter_dzil($_) } @{ $plugin->roles };
     }
     elsif ( $opt->roles eq 'dzil' ) {
-      printf " [%s]", join q[, ],
-        map { $_ =~ s/(^|[|])Dist::Zilla::Role::/$1-/g; $_ } grep { $_ =~ /(\A|[|])Dist::Zilla::Role::/msx } @{ $plugin->roles };
+      printf q{ [%s]}, join q[, ], map { _shorten_dzil($_) } grep { _filter_dzil($_) } @{ $plugin->roles };
     }
   }
-  print "\n";
+  printf "\n";
+  return;
 }
 
 =begin Pod::Coverage
 
-execute 
+execute
 
 =end Pod::Coverage
 
@@ -211,18 +222,18 @@ sub execute {
     while ( my $plugin = $plugin_iterator->() ) {
       $self->_process_plugin( $plugin, $opt, $args );
     }
+    return 0;
   }
-  else {
 
-    my $plugin_iterator = $self->_plugin_iterator;
-    my @plugins;
-    while ( my $plugin = $plugin_iterator->() ) {
-      push @plugins, $plugin;
-    }
-    for my $plugin ( sort { $a->plugin_name cmp $b->plugin_name } @plugins ) {
-      $self->_process_plugin( $plugin, $opt, $args );
-    }
+  my $plugin_iterator = $self->_plugin_iterator;
+  my @plugins;
+  while ( my $plugin = $plugin_iterator->() ) {
+    push @plugins, $plugin;
   }
+  for my $plugin ( sort { $a->plugin_name cmp $b->plugin_name } @plugins ) {
+    $self->_process_plugin( $plugin, $opt, $args );
+  }
+  return 0;
 
 }
 __PACKAGE__->meta->make_immutable;
