@@ -1,5 +1,5 @@
 NAME
-    Dist::Zilla::App::Command::lsplugins - Show all dzil plugins on your
+    Dist::Zilla::App::Command::lsplugins - Show all "dzil" plugins on your
     system, with descriptions
 
 VERSION

@@ -12,7 +12,7 @@ my %module_build_args = (
   "configure_requires" => {
     "Module::Build" => "0.4008"
   },
-  "dist_abstract" => "Show all dzil plugins on your system, with descriptions",
+  "dist_abstract" => "Show all C<dzil> plugins on your system, with descriptions",
   "dist_author" => [
     "Kent Fredric <kentfredric\@gmail.com>"
   ],

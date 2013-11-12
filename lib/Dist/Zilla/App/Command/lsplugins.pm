@@ -9,7 +9,7 @@ BEGIN {
   $Dist::Zilla::App::Command::lsplugins::VERSION = '0.001000';
 }
 
-# ABSTRACT: Show all dzil plugins on your system, with descriptions
+# ABSTRACT: Show all C<dzil> plugins on your system, with descriptions
 
 use Moose;
 use MooseX::NonMoose;
@@ -187,7 +187,7 @@ __END__
 
 =head1 NAME
 
-Dist::Zilla::App::Command::lsplugins - Show all dzil plugins on your system, with descriptions
+Dist::Zilla::App::Command::lsplugins - Show all C<dzil> plugins on your system, with descriptions
 
 =head1 VERSION
 
