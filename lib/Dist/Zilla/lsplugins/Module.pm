@@ -9,6 +9,8 @@ BEGIN {
   $Dist::Zilla::lsplugins::Module::VERSION = '0.001000';
 }
 
+# ABSTRACT: Transient data about a traversed plugin/role/module
+
 use Moose;
 use Try::Tiny;
 
@@ -112,7 +114,7 @@ __END__
 
 =head1 NAME
 
-Dist::Zilla::lsplugins::Module
+Dist::Zilla::lsplugins::Module - Transient data about a traversed plugin/role/module
 
 =head1 VERSION
 
