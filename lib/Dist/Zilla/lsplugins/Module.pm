@@ -3,6 +3,8 @@ use warnings;
 
 package Dist::Zilla::lsplugins::Module;
 
+# ABSTRACT: Transient data about a traversed plugin/role/module
+
 use Moose;
 use Try::Tiny;
 
