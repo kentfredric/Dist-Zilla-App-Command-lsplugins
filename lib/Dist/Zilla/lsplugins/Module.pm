@@ -2,7 +2,9 @@ use strict;
 use warnings;
 
 package Dist::Zilla::lsplugins::Module;
-$Dist::Zilla::lsplugins::Module::VERSION = '0.001001';
+
+our $VERSION = '0.001001';
+
 # ABSTRACT: Transient data about a traversed plugin/role/module
 
 use Moose;

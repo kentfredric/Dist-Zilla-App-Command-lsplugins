@@ -2,7 +2,9 @@ use strict;
 use warnings;
 
 package Dist::Zilla::App::Command::lsplugins;
-$Dist::Zilla::App::Command::lsplugins::VERSION = '0.001001';
+
+our $VERSION = '0.001001';
+
 # ABSTRACT: Show all C<dzil> plugins on your system, with descriptions
 
 use Moose;
