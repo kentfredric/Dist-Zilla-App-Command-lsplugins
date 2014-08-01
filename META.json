@@ -124,13 +124,13 @@
    "release_status" : "stable",
    "resources" : {
       "bugtracker" : {
-         "web" : "https://github.com/kentfredric/Dist-Zilla-App-Command-lsplugins/issues"
+         "web" : "https://github.com/kentnl/Dist-Zilla-App-Command-lsplugins/issues"
       },
-      "homepage" : "https://github.com/kentfredric/Dist-Zilla-App-Command-lsplugins",
+      "homepage" : "https://github.com/kentnl/Dist-Zilla-App-Command-lsplugins",
       "repository" : {
          "type" : "git",
-         "url" : "https://github.com/kentfredric/Dist-Zilla-App-Command-lsplugins.git",
-         "web" : "https://github.com/kentfredric/Dist-Zilla-App-Command-lsplugins"
+         "url" : "https://github.com/kentnl/Dist-Zilla-App-Command-lsplugins.git",
+         "web" : "https://github.com/kentnl/Dist-Zilla-App-Command-lsplugins"
       }
    },
    "version" : "0.001001",
