@@ -5,7 +5,7 @@ use utf8;
 
 package Dist::Zilla::App::Command::lsplugins;
 
-our $VERSION = '0.002000';
+our $VERSION = '0.002001';
 
 # ABSTRACT: Show all dzil plugins on your system, with descriptions
 
@@ -259,7 +259,7 @@ Dist::Zilla::App::Command::lsplugins - Show all dzil plugins on your system, wit
 
 =head1 VERSION
 
-version 0.002000
+version 0.002001
 
 =head1 SYNOPSIS
 
