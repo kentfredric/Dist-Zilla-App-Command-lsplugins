@@ -7,6 +7,8 @@ our $VERSION = '0.001001';
 
 # ABSTRACT: Transient data about a traversed plugin/role/module
 
+our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
+
 use Moose;
 use Try::Tiny;
 
