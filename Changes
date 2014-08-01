@@ -1,6 +1,14 @@
 Release history for Dist-Zilla-App-Command-lsplugins
 
-0.001001 2014-08-01T07:49:26Z
+0.001001 2014-08-01T07:51:01Z
+ [00 Major]
+ - Some changes that may affect hand-operated downstreams.
+
+ [01 Toolkit]
+ - Now uses ExtUtils::MakeMaker
+ - "Latest" dependencies now only recommendations.
+ - https://questhub.io/realm/perl/quest/5388cc12bbd0be5b2500011f
+
  [Dependencies::Stats]
  - Dependencies changed since 0.001000, see misc/*.deps* for details
  - build: ↑1
