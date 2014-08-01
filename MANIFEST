@@ -10,6 +10,7 @@ META.json
 META.yml
 README
 dist.ini
+dist.ini.meta
 lib/Dist/Zilla/App/Command/lsplugins.pm
 lib/Dist/Zilla/lsplugins/Module.pm
 maint-travis-ci/README.mkdn
