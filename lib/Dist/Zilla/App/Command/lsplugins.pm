@@ -11,9 +11,9 @@ our $VERSION = '0.001001';
 
 # AUTHORITY
 
-use Moose;
+use Moose qw( has );
 use MooseX::NonMoose;
-use Dist::Zilla::App -command;
+use Dist::Zilla::App '-command';
 
 =head1 SYNOPSIS
 
