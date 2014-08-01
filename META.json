@@ -90,8 +90,9 @@
             "Path::ScanINC" : "0",
             "Path::Tiny" : "0",
             "Try::Tiny" : "0",
-            "perl" : "5.006",
+            "perl" : "5.008",
             "strict" : "0",
+            "utf8" : "0",
             "warnings" : "0"
          }
       },
@@ -204,6 +205,7 @@
          "Test::Pod::Coverage" : "1.10",
          "Try::Tiny" : "0.22",
          "strict" : "1.08",
+         "utf8" : "1.14",
          "warnings" : "1.24"
       },
       "perl" : {
