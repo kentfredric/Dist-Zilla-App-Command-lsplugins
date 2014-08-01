@@ -1,19 +1,29 @@
+use 5.008;    # utf8
 use strict;
 use warnings;
+use utf8;
 
 package Dist::Zilla::App::Command::lsplugins;
-BEGIN {
-  $Dist::Zilla::App::Command::lsplugins::AUTHORITY = 'cpan:KENTNL';
-}
-{
-  $Dist::Zilla::App::Command::lsplugins::VERSION = '0.001000';
-}
 
-# ABSTRACT: Show all C<dzil> plugins on your system, with descriptions
+our $VERSION = '0.002000';
 
-use Moose;
+# ABSTRACT: Show all dzil plugins on your system, with descriptions
+
+our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
+
+use Moose qw( has );
 use MooseX::NonMoose;
-use Dist::Zilla::App -command;
+use Dist::Zilla::App '-command';
+
+
+
+
+
+
+
+
+
+
 
 
 has _inc_scanner => ( is => ro =>, lazy_build => 1 );
@@ -54,7 +64,7 @@ sub _plugin_all_files_iterator {
         {
           recurse         => 1,
           follow_symlinks => 0,
-        }
+        },
       );
     }
     my $file = $file_iterator->();
@@ -75,7 +85,7 @@ sub _plugin_iterator {
   my $is_plugin = sub {
     my ($file) = @_;
     return unless $file =~ /[.]pm\z/msx;
-    return unless -f $file;
+    return if -d $file;
     return 1;
   };
 
@@ -102,6 +112,57 @@ sub _plugin_iterator {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 sub opt_spec {
   return (
     [ q[sort!],     q[Sort by module name] ],
@@ -124,7 +185,7 @@ sub _shorten_dzil {
 }
 
 sub _process_plugin {
-  my ( $self, $plugin, $opt, $args ) = @_;
+  my ( undef, $plugin, $opt, undef ) = @_;
   if ( defined $opt->with ) {
     return unless $plugin->loaded_module_does( $opt->with );
   }
@@ -136,19 +197,26 @@ sub _process_plugin {
     printf q[ - %s], $plugin->abstract;
   }
   if ( defined $opt->roles ) {
-    if ( $opt->roles eq 'all' ) {
+    if ( 'all' eq $opt->roles ) {
       printf q{ [%s]}, join q[, ], @{ $plugin->roles };
     }
-    elsif ( $opt->roles eq 'dzil-full' ) {
+    elsif ( 'dzil-full' eq $opt->roles ) {
       printf q{ [%s]}, join q[, ], grep { _filter_dzil($_) } @{ $plugin->roles };
     }
-    elsif ( $opt->roles eq 'dzil' ) {
+    elsif ( 'dzil' eq $opt->roles ) {
       printf q{ [%s]}, join q[, ], map { _shorten_dzil($_) } grep { _filter_dzil($_) } @{ $plugin->roles };
     }
   }
   printf "\n";
   return;
 }
+
+
+
+
+
+
+
 
 
 sub execute {
@@ -187,11 +255,11 @@ __END__
 
 =head1 NAME
 
-Dist::Zilla::App::Command::lsplugins - Show all C<dzil> plugins on your system, with descriptions
+Dist::Zilla::App::Command::lsplugins - Show all dzil plugins on your system, with descriptions
 
 =head1 VERSION
 
-version 0.001000
+version 0.002000
 
 =head1 SYNOPSIS
 
@@ -262,7 +330,7 @@ Kent Fredric <kentfredric@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Kent Fredric <kentfredric@gmail.com>.
+This software is copyright (c) 2014 by Kent Fredric <kentfredric@gmail.com>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
