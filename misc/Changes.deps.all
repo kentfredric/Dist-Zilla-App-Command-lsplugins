@@ -1,0 +1,9 @@
+This file contains ALL changes in dependencies in both REQUIRED / OPTIONAL dependencies for all phases (configure/build/runtime/test/develop)
+
+0.001001
+ [Changed / build requires]
+ - Module::Build 0.4008 → 0.4200
+
+ [Changed / configure requires]
+ - Module::Build 0.4008 → 0.4200
+

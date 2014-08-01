@@ -4,7 +4,7 @@ Dist::Zilla::App::Command::lsplugins - Show all `dzil` plugins on your system, w
 
 # VERSION
 
-version 0.001000
+version 0.001001
 
 # SYNOPSIS
 
