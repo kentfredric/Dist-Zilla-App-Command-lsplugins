@@ -1,5 +1,5 @@
 {
-   "abstract" : "Show all C<dzil> plugins on your system, with descriptions",
+   "abstract" : "Show all dzil plugins on your system, with descriptions",
    "author" : [
       "Kent Fredric <kentfredric@gmail.com>"
    ],

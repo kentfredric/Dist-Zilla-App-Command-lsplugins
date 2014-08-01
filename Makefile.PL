@@ -10,7 +10,7 @@ use ExtUtils::MakeMaker ;
 
 
 my %WriteMakefileArgs = (
-  "ABSTRACT" => "Show all C<dzil> plugins on your system, with descriptions",
+  "ABSTRACT" => "Show all dzil plugins on your system, with descriptions",
   "AUTHOR" => "Kent Fredric <kentfredric\@gmail.com>",
   "CONFIGURE_REQUIRES" => {
     "ExtUtils::MakeMaker" => 0
