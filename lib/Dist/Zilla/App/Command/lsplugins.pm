@@ -2,18 +2,22 @@ use strict;
 use warnings;
 
 package Dist::Zilla::App::Command::lsplugins;
-BEGIN {
-  $Dist::Zilla::App::Command::lsplugins::AUTHORITY = 'cpan:KENTNL';
-}
-{
-  $Dist::Zilla::App::Command::lsplugins::VERSION = '0.001001';
-}
-
+$Dist::Zilla::App::Command::lsplugins::VERSION = '0.001001';
 # ABSTRACT: Show all C<dzil> plugins on your system, with descriptions
 
 use Moose;
 use MooseX::NonMoose;
 use Dist::Zilla::App -command;
+
+
+
+
+
+
+
+
+
+
 
 
 has _inc_scanner => ( is => ro =>, lazy_build => 1 );
@@ -102,6 +106,57 @@ sub _plugin_iterator {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 sub opt_spec {
   return (
     [ q[sort!],     q[Sort by module name] ],
@@ -149,6 +204,13 @@ sub _process_plugin {
   printf "\n";
   return;
 }
+
+
+
+
+
+
+
 
 
 sub execute {
@@ -262,7 +324,7 @@ Kent Fredric <kentfredric@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Kent Fredric <kentfredric@gmail.com>.
+This software is copyright (c) 2014 by Kent Fredric <kentfredric@gmail.com>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
