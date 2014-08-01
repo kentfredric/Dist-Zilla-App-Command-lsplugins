@@ -185,7 +185,7 @@ sub _shorten_dzil {
 }
 
 sub _process_plugin {
-  my ( $self, $plugin, $opt, $args ) = @_;
+  my ( undef, $plugin, $opt, undef ) = @_;
   if ( defined $opt->with ) {
     return unless $plugin->loaded_module_does( $opt->with );
   }
