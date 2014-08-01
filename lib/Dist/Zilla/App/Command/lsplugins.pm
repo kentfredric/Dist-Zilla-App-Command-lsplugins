@@ -11,9 +11,9 @@ our $VERSION = '0.001001';
 
 our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 
-use Moose;
+use Moose qw( has );
 use MooseX::NonMoose;
-use Dist::Zilla::App -command;
+use Dist::Zilla::App '-command';
 
 
 
