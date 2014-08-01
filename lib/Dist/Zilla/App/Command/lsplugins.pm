@@ -7,6 +7,8 @@ our $VERSION = '0.001001';
 
 # ABSTRACT: Show all C<dzil> plugins on your system, with descriptions
 
+# AUTHORITY
+
 use Moose;
 use MooseX::NonMoose;
 use Dist::Zilla::App -command;
