@@ -27,7 +27,7 @@ Supported parameters:
 
 - `--no-sort`
 
-    No Sorting ( __Default__ )
+    No Sorting ( **Default** )
 
 - `--versions`
 
@@ -35,7 +35,7 @@ Supported parameters:
 
 - `--no-versions`
 
-    No Versions ( __Default__ )
+    No Versions ( **Default** )
 
 - `--abstract`
 
@@ -43,7 +43,7 @@ Supported parameters:
 
 - `--no-abstract`
 
-    Don't show abstracts ( __Default__ )
+    Don't show abstracts ( **Default** )
 
 - `--roles=all`
 
@@ -69,7 +69,7 @@ Kent Fredric <kentfredric@gmail.com>
 
 # COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Kent Fredric <kentfredric@gmail.com>.
+This software is copyright (c) 2014 by Kent Fredric <kentfredric@gmail.com>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
