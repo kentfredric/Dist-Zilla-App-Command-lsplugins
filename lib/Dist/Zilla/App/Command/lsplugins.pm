@@ -3,6 +3,8 @@ use warnings;
 
 package Dist::Zilla::App::Command::lsplugins;
 
+our $VERSION = '0.001001';
+
 # ABSTRACT: Show all C<dzil> plugins on your system, with descriptions
 
 use Moose;
