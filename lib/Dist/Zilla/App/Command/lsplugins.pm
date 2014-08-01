@@ -64,7 +64,7 @@ sub _plugin_all_files_iterator {
         {
           recurse         => 1,
           follow_symlinks => 0,
-        }
+        },
       );
     }
     my $file = $file_iterator->();
