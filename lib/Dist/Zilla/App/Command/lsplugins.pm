@@ -197,13 +197,13 @@ sub _process_plugin {
     printf q[ - %s], $plugin->abstract;
   }
   if ( defined $opt->roles ) {
-    if ( $opt->roles eq 'all' ) {
+    if ( 'all' eq $opt->roles ) {
       printf q{ [%s]}, join q[, ], @{ $plugin->roles };
     }
-    elsif ( $opt->roles eq 'dzil-full' ) {
+    elsif ( 'dzil-full' eq $opt->roles ) {
       printf q{ [%s]}, join q[, ], grep { _filter_dzil($_) } @{ $plugin->roles };
     }
-    elsif ( $opt->roles eq 'dzil' ) {
+    elsif ( 'dzil' eq $opt->roles ) {
       printf q{ [%s]}, join q[, ], map { _shorten_dzil($_) } grep { _filter_dzil($_) } @{ $plugin->roles };
     }
   }
