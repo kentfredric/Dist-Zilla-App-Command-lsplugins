@@ -3,7 +3,7 @@ NAME
     system, with descriptions
 
 VERSION
-    version 0.001001
+    version 0.002000
 
 SYNOPSIS
         dzil lsplugins # see a list of all plugins on your system
