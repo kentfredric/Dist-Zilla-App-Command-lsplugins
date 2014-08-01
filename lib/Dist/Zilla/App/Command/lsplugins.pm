@@ -85,7 +85,7 @@ sub _plugin_iterator {
   my $is_plugin = sub {
     my ($file) = @_;
     return unless $file =~ /[.]pm\z/msx;
-    return unless -f $file;
+    return if -d $file;
     return 1;
   };
 
