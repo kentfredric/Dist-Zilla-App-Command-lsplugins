@@ -2,7 +2,7 @@ This file contains changes to DEVELOPMENT dependencies only ( both REQUIRED and 
 
 0.002001
  [Changed / develop suggests]
- - Dist::Zilla::PluginBundle::Author::KENTNL 2.016006 → 2.016007
+ - Dist::Zilla::PluginBundle::Author::KENTNL 2.016006 → 2.016008
 
 0.002000 2014-08-01T08:09:39Z
  [Added / develop requires]
