@@ -15,17 +15,6 @@ use Moose qw( has );
 use MooseX::NonMoose;
 use Dist::Zilla::App '-command';
 
-
-
-
-
-
-
-
-
-
-
-
 has _inc_scanner => ( is => ro =>, lazy_build => 1 );
 has _plugin_dirs => ( is => ro =>, lazy_build => 1 );
 
