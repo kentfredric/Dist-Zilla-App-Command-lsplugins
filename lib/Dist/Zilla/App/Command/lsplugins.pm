@@ -15,17 +15,6 @@ use Moose qw( has );
 use MooseX::NonMoose;
 use Dist::Zilla::App '-command';
 
-=head1 SYNOPSIS
-
-    dzil lsplugins # see a list of all plugins on your system
-    dzil lsplugins --version # with versions!
-    dzil lsplugins --sort    # sort them!
-    dzil lsplugins --abstract # show their ABSTRACTs!
-    dzil lsplugins --with=-FilePruner # show only file pruners
-    dzil lsplugins --roles=dzil  # show all the dzil related role data!
-
-=cut
-
 has _inc_scanner => ( is => ro =>, lazy_build => 1 );
 has _plugin_dirs => ( is => ro =>, lazy_build => 1 );
 
@@ -246,3 +235,14 @@ __PACKAGE__->meta->make_immutable;
 no Moose;
 
 1;
+
+=head1 SYNOPSIS
+
+    dzil lsplugins # see a list of all plugins on your system
+    dzil lsplugins --version # with versions!
+    dzil lsplugins --sort    # sort them!
+    dzil lsplugins --abstract # show their ABSTRACTs!
+    dzil lsplugins --with=-FilePruner # show only file pruners
+    dzil lsplugins --roles=dzil  # show all the dzil related role data!
+
+=cut

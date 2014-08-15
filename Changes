@@ -2,12 +2,20 @@ Release history for Dist-Zilla-App-Command-lsplugins
 
 {{$NEXT}}
  [00 Trivial]
- - update test::reportversions
+ - no code changes.
+ - tests augmented.
+ - whitespace adjusted.
 
  [Dependencies::Stats]
  - Dependencies changed since 0.002000, see misc/*.deps* for details
  - develop: +1 (suggests: ↑1)
  - test: -3
+
+ [Misc]
+ - Improve source side POD to reduce build side whitespace.
+
+ [Tests]
+ - update test::reportversions
 
 0.002000 2014-08-01T08:09:39Z
  [00 Major]
