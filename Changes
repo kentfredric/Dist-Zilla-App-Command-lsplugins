@@ -2,6 +2,7 @@ Release history for Dist-Zilla-App-Command-lsplugins
 
 {{$NEXT}}
  [00 Trivial]
+ - CPANDAY!
  - no code changes.
  - tests augmented.
  - whitespace adjusted.
