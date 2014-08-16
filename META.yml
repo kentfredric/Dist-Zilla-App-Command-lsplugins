@@ -18,10 +18,10 @@ name: Dist-Zilla-App-Command-lsplugins
 provides:
   Dist::Zilla::App::Command::lsplugins:
     file: lib/Dist/Zilla/App/Command/lsplugins.pm
-    version: '0.002001'
+    version: '0.002002'
   Dist::Zilla::lsplugins::Module:
     file: lib/Dist/Zilla/lsplugins/Module.pm
-    version: '0.002001'
+    version: '0.002002'
 requires:
   Carp: '0'
   Dist::Zilla::App: '0'
@@ -41,7 +41,7 @@ resources:
   bugtracker: https://github.com/kentnl/Dist-Zilla-App-Command-lsplugins/issues
   homepage: https://github.com/kentnl/Dist-Zilla-App-Command-lsplugins
   repository: https://github.com/kentnl/Dist-Zilla-App-Command-lsplugins.git
-version: '0.002001'
+version: '0.002002'
 x_BuiltWith:
   modules:
     CPAN::Meta: '2.142060'
@@ -439,7 +439,7 @@ x_Dist_Zilla:
         Dist::Zilla::Plugin::Git::Tag:
           branch: ~
           signed: '0'
-          tag: 0.002001-source
+          tag: 0.002002-source
           tag_format: '%v-source'
           tag_message: v%v
           time_zone: local
@@ -493,7 +493,7 @@ x_Dist_Zilla:
         Dist::Zilla::Plugin::Git::Tag:
           branch: releases
           signed: '0'
-          tag: '0.002001'
+          tag: '0.002002'
           tag_format: '%v'
           tag_message: v%v
           time_zone: local

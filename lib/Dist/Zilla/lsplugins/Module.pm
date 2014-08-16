@@ -5,7 +5,7 @@ use utf8;
 
 package Dist::Zilla::lsplugins::Module;
 
-our $VERSION = '0.002001';
+our $VERSION = '0.002002';
 
 # ABSTRACT: Transient data about a traversed plugin/role/module
 
@@ -126,7 +126,7 @@ Dist::Zilla::lsplugins::Module - Transient data about a traversed plugin/role/mo
 
 =head1 VERSION
 
-version 0.002001
+version 0.002002
 
 =head1 METHODS
 
