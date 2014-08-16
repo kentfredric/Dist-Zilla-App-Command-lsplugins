@@ -5,7 +5,7 @@ use utf8;
 
 package Dist::Zilla::App::Command::lsplugins;
 
-our $VERSION = '0.002000';
+our $VERSION = '0.002001';
 
 # ABSTRACT: Show all dzil plugins on your system, with descriptions
 
@@ -14,17 +14,6 @@ our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 use Moose qw( has );
 use MooseX::NonMoose;
 use Dist::Zilla::App '-command';
-
-
-
-
-
-
-
-
-
-
-
 
 has _inc_scanner => ( is => ro =>, lazy_build => 1 );
 has _plugin_dirs => ( is => ro =>, lazy_build => 1 );
@@ -259,7 +248,7 @@ Dist::Zilla::App::Command::lsplugins - Show all dzil plugins on your system, wit
 
 =head1 VERSION
 
-version 0.002000
+version 0.002001
 
 =head1 SYNOPSIS
 
