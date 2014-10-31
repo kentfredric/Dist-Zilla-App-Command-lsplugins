@@ -4,7 +4,7 @@ use warnings;
 
 package Dist::Zilla::App::Command::lsplugins;
 
-our $VERSION = '0.002002';
+our $VERSION = '0.003000';
 
 # ABSTRACT: Show all dzil plugins on your system, with descriptions
 
@@ -12,12 +12,12 @@ our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 
 use Dist::Zilla::App '-command';
 
-sub _inc_scanner { ## no critic (RequireArgUnpacking)
+sub _inc_scanner {    ## no critic (RequireArgUnpacking)
   return $_[0]->{_inc_scanner} if exists $_[0]->{_inc_scanner};
   return ( $_[0]->{_inc_scanner} = $_[0]->_build__inc_scanner );
 }
 
-sub _plugin_dirs { ## no critic (RequireArgUnpacking)
+sub _plugin_dirs {    ## no critic (RequireArgUnpacking)
   return $_[0]->{_plugin_dirs} if exists $_[0]->{_plugin_dirs};
   return ( $_[0]->{_plugin_dirs} = $_[0]->_build__plugin_dirs );
 }
@@ -187,7 +187,7 @@ sub _process_plugin {
     printf q[ (%s)], $plugin->version;
   }
   if ( $opt->abstract ) {
-    printf q[ - %s], $plugin->abstract;
+    printf q[ - %s], $plugin->abstract || ' NO ABSTRACT DEFINED';
   }
   if ( defined $opt->roles ) {
     if ( 'all' eq $opt->roles ) {
@@ -250,7 +250,7 @@ Dist::Zilla::App::Command::lsplugins - Show all dzil plugins on your system, wit
 
 =head1 VERSION
 
-version 0.002002
+version 0.003000
 
 =head1 SYNOPSIS
 

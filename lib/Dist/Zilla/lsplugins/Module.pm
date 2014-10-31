@@ -4,7 +4,7 @@ use warnings;
 
 package Dist::Zilla::lsplugins::Module;
 
-our $VERSION = '0.002002';
+our $VERSION = '0.003000';
 
 # ABSTRACT: Transient data about a traversed plugin/role/module
 
@@ -55,7 +55,7 @@ sub _build_abstract {
   require Dist::Zilla::Util;
   ## no critic ( Subroutines::ProtectPrivateSubs )
   my $e = Dist::Zilla::Util::PEA->_new();
-  $e->read_file( $self->file );
+  $e->read_file( $self->file->stringify );
   return $e->{abstract};
 }
 
@@ -125,7 +125,7 @@ Dist::Zilla::lsplugins::Module - Transient data about a traversed plugin/role/mo
 
 =head1 VERSION
 
-version 0.002002
+version 0.003000
 
 =head1 METHODS
 

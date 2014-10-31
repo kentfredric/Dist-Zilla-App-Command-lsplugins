@@ -1,11 +1,15 @@
 Release history for Dist-Zilla-App-Command-lsplugins
 
-0.002002 2014-10-31T15:39:15Z 1066261
+0.003000 2014-10-31T16:41:58Z 70c4a28
+ [Bugfix]
+ - Avoid errors with utf8 loading for abstract parsing.
+ - Avoid warnings with empty abstracts
+
  [Dependencies::Stats]
  - Dependencies changed since 0.002001, see misc/*.deps* for details
  - configure: +1 (recommends: ↑1)
  - develop: +6 ↑2 -1 (recommends: +1, suggests: ↑2)
- - runtime: -1
+ - runtime: ↓1 -2
  - test: +1 (recommends: ↑2)
 
  [Internals]
