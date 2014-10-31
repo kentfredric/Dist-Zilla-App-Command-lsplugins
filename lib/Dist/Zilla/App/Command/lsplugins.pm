@@ -187,7 +187,7 @@ sub _process_plugin {
     printf q[ (%s)], $plugin->version;
   }
   if ( $opt->abstract ) {
-    printf q[ - %s], $plugin->abstract;
+    printf q[ - %s], $plugin->abstract || ' NO ABSTRACT DEFINED';
   }
   if ( defined $opt->roles ) {
     if ( 'all' eq $opt->roles ) {
