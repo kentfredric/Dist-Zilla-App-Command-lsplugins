@@ -4,7 +4,7 @@ use warnings;
 
 package Dist::Zilla::App::Command::lsplugins;
 
-our $VERSION = '0.003000';
+our $VERSION = '0.003001';
 
 # ABSTRACT: Show all dzil plugins on your system, with descriptions
 
@@ -250,7 +250,7 @@ Dist::Zilla::App::Command::lsplugins - Show all dzil plugins on your system, wit
 
 =head1 VERSION
 
-version 0.003000
+version 0.003001
 
 =head1 SYNOPSIS
 

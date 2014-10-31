@@ -1,5 +1,7 @@
 Release history for Dist-Zilla-App-Command-lsplugins
 
+0.003001 2014-10-31T16:43:50Z ecf61f9
+
 0.003000 2014-10-31T16:43:28Z 70666e2
  [Bugfix]
  - Avoid errors with utf8 loading for abstract parsing.
