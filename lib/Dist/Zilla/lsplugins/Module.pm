@@ -139,7 +139,7 @@ If it can proceed to calling C<does>, it will return true if the C<plugin> C<doe
 
 =head1 AUTHOR
 
-Kent Fredric <kentfredric@gmail.com>
+Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 

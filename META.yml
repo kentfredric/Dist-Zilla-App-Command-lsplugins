@@ -1,7 +1,7 @@
 ---
 abstract: 'Show all dzil plugins on your system, with descriptions'
 author:
-  - 'Kent Fredric <kentfredric@gmail.com>'
+  - 'Kent Fredric <kentnl@cpan.org>'
 build_requires:
   ExtUtils::MakeMaker: '0'
   File::Spec: '0'
