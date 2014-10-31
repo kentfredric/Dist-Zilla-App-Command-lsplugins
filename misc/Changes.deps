@@ -2,10 +2,17 @@ This file contains changes in REQUIRED dependencies for standard CPAN phases (co
 
 0.002002
  [Added / configure requires]
- - perl 5.008
+ - perl 5.006
 
  [Added / test requires]
- - perl 5.008
+ - perl 5.006
+
+ [Changed / runtime requires]
+ - perl 5.008 → 5.006
+
+ [Removed / runtime requires]
+ - MooseX::NonMoose
+ - utf8
 
 0.002001 2014-08-15T21:14:50Z
  [Removed / test requires]
