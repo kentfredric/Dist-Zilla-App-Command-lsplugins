@@ -81,7 +81,6 @@ do { my $x = {
                                       'Module::Metadata' => '0',
                                       'Module::Runtime' => '0',
                                       'Moose' => '0',
-                                      'MooseX::NonMoose' => '0',
                                       'Path::ScanINC' => '0',
                                       'Path::Tiny' => '0',
                                       'Try::Tiny' => '0',

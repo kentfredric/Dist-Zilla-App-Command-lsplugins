@@ -1,7 +1,6 @@
-use 5.008;    # utf8
+use 5.006;
 use strict;
 use warnings;
-use utf8;
 
 package Dist::Zilla::App::Command::lsplugins;
 
@@ -11,12 +10,17 @@ our $VERSION = '0.002002';
 
 our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 
-use Moose qw( has );
-use MooseX::NonMoose;
 use Dist::Zilla::App '-command';
 
-has _inc_scanner => ( is => ro =>, lazy_build => 1 );
-has _plugin_dirs => ( is => ro =>, lazy_build => 1 );
+sub _inc_scanner {
+  return $_[0]->{_inc_scanner} if exists $_[0]->{_inc_scanner};
+  return ( $_[0]->{_inc_scanner} = $_[0]->_build__inc_scanner );
+}
+
+sub _plugin_dirs {
+  return $_[0]->{_plugin_dirs} if exists $_[0]->{_plugin_dirs};
+  return ( $_[0]->{_plugin_dirs} = $_[0]->_build__plugin_dirs );
+}
 
 sub _build__inc_scanner {
   require Path::ScanINC;
@@ -231,8 +235,6 @@ sub execute {
   return 0;
 
 }
-__PACKAGE__->meta->make_immutable;
-no Moose;
 
 1;
 
