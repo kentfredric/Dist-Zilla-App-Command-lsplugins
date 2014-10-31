@@ -55,7 +55,7 @@ sub _build_abstract {
   require Dist::Zilla::Util;
   ## no critic ( Subroutines::ProtectPrivateSubs )
   my $e = Dist::Zilla::Util::PEA->_new();
-  $e->read_string( $self->file->slurp_utf8 );
+  $e->read_file( $self->file->stringify );
   return $e->{abstract};
 }
 

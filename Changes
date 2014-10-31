@@ -1,6 +1,9 @@
 Release history for Dist-Zilla-App-Command-lsplugins
 
 {{$NEXT}}
+ [Bugfix]
+ - Avoid errors with utf8 loading for abstract parsing.
+
  [Dependencies::Stats]
  - Dependencies changed since 0.002001, see misc/*.deps* for details
  - configure: +1 (recommends: ↑1)
