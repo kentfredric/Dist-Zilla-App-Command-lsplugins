@@ -4,7 +4,7 @@ use warnings;
 
 package Dist::Zilla::lsplugins::Module;
 
-our $VERSION = '0.002002';
+our $VERSION = '0.003001';
 
 # ABSTRACT: Transient data about a traversed plugin/role/module
 
