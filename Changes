@@ -8,6 +8,11 @@ Release history for Dist-Zilla-App-Command-lsplugins
  - runtime: -1
  - test: +1 (recommends: ↑2)
 
+ [Internals]
+ - remove utf8
+ - support 5.006
+ - drop App::Command loading Moose and MooseX::NonMoose
+
  [Metadata]
  - author = kentnl@cpan.org
 

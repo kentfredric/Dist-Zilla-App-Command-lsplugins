@@ -1,7 +1,6 @@
-use 5.008;    # utf8
+use 5.006;
 use strict;
 use warnings;
-use utf8;
 
 package Dist::Zilla::lsplugins::Module;
 
@@ -56,7 +55,7 @@ sub _build_abstract {
   require Dist::Zilla::Util;
   ## no critic ( Subroutines::ProtectPrivateSubs )
   my $e = Dist::Zilla::Util::PEA->_new();
-  $e->read_string( $self->file->slurp_utf8 );
+  $e->read_file( $self->file );
   return $e->{abstract};
 }
 

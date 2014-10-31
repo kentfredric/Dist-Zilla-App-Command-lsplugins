@@ -20,7 +20,7 @@
          },
          "requires" : {
             "ExtUtils::MakeMaker" : "0",
-            "perl" : "5.008"
+            "perl" : "5.006"
          }
       },
       "develop" : {
@@ -99,9 +99,8 @@
             "Path::ScanINC" : "0",
             "Path::Tiny" : "0",
             "Try::Tiny" : "0",
-            "perl" : "5.008",
+            "perl" : "5.006",
             "strict" : "0",
-            "utf8" : "0",
             "warnings" : "0"
          }
       },
@@ -115,7 +114,7 @@
             "ExtUtils::MakeMaker" : "0",
             "File::Spec" : "0",
             "Test::More" : "0.89",
-            "perl" : "5.008"
+            "perl" : "5.006"
          }
       }
    },
@@ -213,7 +212,6 @@
          "Test::Pod::Coverage" : "1.10",
          "Try::Tiny" : "0.22",
          "strict" : "1.08",
-         "utf8" : "1.14",
          "warnings" : "1.26"
       },
       "perl" : {
