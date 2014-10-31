@@ -1,5 +1,25 @@
 Release history for Dist-Zilla-App-Command-lsplugins
 
+0.003000 2014-10-31T16:43:28Z 70666e2
+ [Bugfix]
+ - Avoid errors with utf8 loading for abstract parsing.
+ - Avoid warnings with empty abstracts
+
+ [Dependencies::Stats]
+ - Dependencies changed since 0.002001, see misc/*.deps* for details
+ - configure: +1 (recommends: ↑1)
+ - develop: +6 ↑2 -1 (recommends: +1, suggests: ↑2)
+ - runtime: ↓1 -2
+ - test: +1 (recommends: ↑2)
+
+ [Internals]
+ - remove utf8
+ - support 5.006
+ - drop App::Command loading Moose and MooseX::NonMoose
+
+ [Metadata]
+ - author = kentnl@cpan.org
+
 0.002001 2014-08-15T21:14:50Z
  [00 Trivial]
  - CPANDAY!

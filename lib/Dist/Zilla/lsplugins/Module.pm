@@ -1,11 +1,10 @@
-use 5.008;    # utf8
+use 5.006;
 use strict;
 use warnings;
-use utf8;
 
 package Dist::Zilla::lsplugins::Module;
 
-our $VERSION = '0.002001';
+our $VERSION = '0.003000';
 
 # ABSTRACT: Transient data about a traversed plugin/role/module
 
@@ -56,7 +55,7 @@ sub _build_abstract {
   require Dist::Zilla::Util;
   ## no critic ( Subroutines::ProtectPrivateSubs )
   my $e = Dist::Zilla::Util::PEA->_new();
-  $e->read_string( $self->file->slurp_utf8 );
+  $e->read_file( $self->file->stringify );
   return $e->{abstract};
 }
 
@@ -126,7 +125,7 @@ Dist::Zilla::lsplugins::Module - Transient data about a traversed plugin/role/mo
 
 =head1 VERSION
 
-version 0.002001
+version 0.003000
 
 =head1 METHODS
 
@@ -139,7 +138,7 @@ If it can proceed to calling C<does>, it will return true if the C<plugin> C<doe
 
 =head1 AUTHOR
 
-Kent Fredric <kentfredric@gmail.com>
+Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 

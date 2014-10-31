@@ -1,22 +1,26 @@
-use 5.008;    # utf8
+use 5.006;
 use strict;
 use warnings;
-use utf8;
 
 package Dist::Zilla::App::Command::lsplugins;
 
-our $VERSION = '0.002001';
+our $VERSION = '0.003000';
 
 # ABSTRACT: Show all dzil plugins on your system, with descriptions
 
 our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 
-use Moose qw( has );
-use MooseX::NonMoose;
 use Dist::Zilla::App '-command';
 
-has _inc_scanner => ( is => ro =>, lazy_build => 1 );
-has _plugin_dirs => ( is => ro =>, lazy_build => 1 );
+sub _inc_scanner {    ## no critic (RequireArgUnpacking)
+  return $_[0]->{_inc_scanner} if exists $_[0]->{_inc_scanner};
+  return ( $_[0]->{_inc_scanner} = $_[0]->_build__inc_scanner );
+}
+
+sub _plugin_dirs {    ## no critic (RequireArgUnpacking)
+  return $_[0]->{_plugin_dirs} if exists $_[0]->{_plugin_dirs};
+  return ( $_[0]->{_plugin_dirs} = $_[0]->_build__plugin_dirs );
+}
 
 sub _build__inc_scanner {
   require Path::ScanINC;
@@ -183,7 +187,7 @@ sub _process_plugin {
     printf q[ (%s)], $plugin->version;
   }
   if ( $opt->abstract ) {
-    printf q[ - %s], $plugin->abstract;
+    printf q[ - %s], $plugin->abstract || ' NO ABSTRACT DEFINED';
   }
   if ( defined $opt->roles ) {
     if ( 'all' eq $opt->roles ) {
@@ -231,8 +235,6 @@ sub execute {
   return 0;
 
 }
-__PACKAGE__->meta->make_immutable;
-no Moose;
 
 1;
 
@@ -248,7 +250,7 @@ Dist::Zilla::App::Command::lsplugins - Show all dzil plugins on your system, wit
 
 =head1 VERSION
 
-version 0.002001
+version 0.003000
 
 =head1 SYNOPSIS
 
@@ -315,7 +317,7 @@ Show only plugins that C<< does($rolename) >>
 
 =head1 AUTHOR
 
-Kent Fredric <kentfredric@gmail.com>
+Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
