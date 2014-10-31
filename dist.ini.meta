@@ -10,7 +10,6 @@ copyright_holder = Kent Fredric <kentfredric@gmail.com>
 
 [@Author::KENTNL]
 :version          = 2.022
-git_versions      = 1
 twitter_extra_hash_tags = #distzilla
 normal_form       = numify
 mantissa          = 6
