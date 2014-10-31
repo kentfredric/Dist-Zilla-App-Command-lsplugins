@@ -12,12 +12,12 @@ our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 
 use Dist::Zilla::App '-command';
 
-sub _inc_scanner {
+sub _inc_scanner { ## no critic (RequireArgUnpacking)
   return $_[0]->{_inc_scanner} if exists $_[0]->{_inc_scanner};
   return ( $_[0]->{_inc_scanner} = $_[0]->_build__inc_scanner );
 }
 
-sub _plugin_dirs {
+sub _plugin_dirs { ## no critic (RequireArgUnpacking)
   return $_[0]->{_plugin_dirs} if exists $_[0]->{_plugin_dirs};
   return ( $_[0]->{_plugin_dirs} = $_[0]->_build__plugin_dirs );
 }
