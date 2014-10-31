@@ -1,6 +1,11 @@
 Release history for Dist-Zilla-App-Command-lsplugins
 
-0.002002 2014-08-16T00:18:26Z ff20954
+0.002002 2014-10-31T15:06:20Z a540fc6
+ [Dependencies::Stats]
+ - Dependencies changed since 0.002001, see misc/*.deps* for details
+ - configure: +1 (recommends: ↑1)
+ - develop: +6 ↑2 -1 (recommends: +1, suggests: ↑2)
+ - test: +1 (recommends: ↑2)
 
 0.002001 2014-08-15T21:14:50Z
  [00 Trivial]
